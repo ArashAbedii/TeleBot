@@ -1,10 +1,10 @@
 <?php
 namespace Src;
 use Src\Update;
-class Message extends Update {
+class Chat extends Update {
 
-    public function getText(){
-        return $this->message->text;
+    public function getChatId(){
+        return $this->message->chat->id;
     }
 
     public function getMessageId(){

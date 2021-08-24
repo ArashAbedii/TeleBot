@@ -1,8 +1,10 @@
 {
     "autoload": {
         "psr-4": {
+            "App\\Modules\\":"app/Modules",
             "App\\Controllers\\":"app/Controllers",
             "App\\Models\\":"app/Models",
+            
             "Src\\":"src"
         },
         "files": ["src/Helpers/functions.php"]

@@ -1,0 +1,23 @@
+<?php
+#!/usr/bin/env php
+
+$event=$argv[1];
+$moduleName=$argv[2];
+
+if($event=='make:module'){
+    if(empty($moduleName)){
+        die('Enter module name : php artisan make:module moduleName');
+    }else{
+        file_put_contents("app/Modules/$moduleName.php",'<?php
+
+namespace App\Modules;
+
+class '.$moduleName.' {
+    public static function run(){
+        global $bot;
+        //do somethings
+    }
+}');
+    echo "Your module created successfully\n";
+    }
+}

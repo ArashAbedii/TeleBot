@@ -2,11 +2,22 @@
 
 namespace App\Controllers;
 
+use App\Modules\Hello;
+use App\Modules\SayHello;
 use Src\Message;
 
+use function App\Modules\test;
+
 class MessageHandler extends Message {
-     public function run(){
-        //go something
-        $this->sendRequest('sendMessage',['chat_id'=>$this->getChatId(),'text'=>'hello']);
-     }
+   public static function run(){
+      global $bot;
+
+      //do something
+      if($bot->message->getText()=='hi'){
+         //load modules
+         SayHello::run();
+         
+      }
+
+   }
  }

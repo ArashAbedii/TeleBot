@@ -1,7 +1,6 @@
 <?php
 
 function config($fileName="env.php"){
-    $conf=include("./config/$fileName");
+    $conf=include($_SERVER['DOCUMENT_ROOT']."/config/$fileName");
     return $conf;
 }
-

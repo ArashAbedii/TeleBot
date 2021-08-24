@@ -17,6 +17,7 @@ class ComposerStaticInit031c0315dd0fabacf978a4633e0284e4
         ),
         'A' => 
         array (
+            'App\\Modules\\' => 12,
             'App\\Models\\' => 11,
             'App\\Controllers\\' => 16,
         ),
@@ -26,6 +27,10 @@ class ComposerStaticInit031c0315dd0fabacf978a4633e0284e4
         'Src\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'App\\Modules\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/Modules',
         ),
         'App\\Models\\' => 
         array (

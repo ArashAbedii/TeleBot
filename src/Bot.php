@@ -2,29 +2,29 @@
 
 namespace Src;
 
-abstract class Bot {
-    protected $token;
-    protected $update;
-    protected $messageType;
-
+class Bot {
+   
+    public $message;
+    public $chat;
+    public $update;
 
     public function __construct()
     {
-        $this->update=json_decode(file_get_contents('php://input'));
-        file_put_contents('test.txt',$this->update);
-        $this->token=config()['token'];
+        $this->update=new Update();
+        $this->message=new Message();
+        $this->chat=new Chat();
+    }
+
+    public function sendMessage(array $params){
+        if(empty($params['chat_id'])){
+            $params['chat_id']=$this->chat->getChatId();
+            return $this->sendRequest('sendMessage',$params);
+        }
     }
 
 
-
-    abstract public function getChatId();
-    abstract public function getText();
-    abstract public function getMessageId();
-
-
-
     static function redirectRequests($url=""){
-        $params=['update'=>file_get_contents("php://input")];
+        $params=file_get_contents("php://input");
 
         if(empty($url)){
             $url=config()['domain']."/public/bot.php";
@@ -60,7 +60,8 @@ abstract class Bot {
     }
 
     public static function sendRequest($method,array $params){
-        $token=config()['token'];
+        $token="632423848:AAECin8sUe_VdUqdAKnq8XlsAKSpUvqE2nU";
+        file_put_contents('tttt',$token);
         $reqUrl="https://api.telegram.org/bot$token/$method";
         return Server::sendRequest($reqUrl,$params,'post');
     }
