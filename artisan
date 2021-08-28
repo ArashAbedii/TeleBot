@@ -13,10 +13,17 @@ if($event=='make:module'){
 namespace App\Modules;
 
 class '.$moduleName.' {
+
     public static function run(){
-        global $bot;
-        //do somethings
+        return new '.$moduleName.';
     }
+
+    public function example(){
+
+        //code something
+        bot()->sendMessage([\'text\'=>\'example\']);
+    }
+    
 }');
     echo "Your module created successfully\n";
     }

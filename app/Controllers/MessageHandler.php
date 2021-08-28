@@ -2,22 +2,12 @@
 
 namespace App\Controllers;
 
-use App\Modules\Hello;
 use App\Modules\SayHello;
 use Src\Message;
-
-use function App\Modules\test;
+use Src\ReplyKeyboardMarkup;
 
 class MessageHandler extends Message {
-   public static function run(){
-      global $bot;
-
-      //do something
-      if($bot->message->getText()=='hi'){
-         //load modules
-         SayHello::run();
-         
-      }
-
+   public function run(){
+       bot()->sendMessage(['text'=>$this->getText()]); //insert this code
    }
  }
