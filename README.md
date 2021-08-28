@@ -1,9 +1,9 @@
 #  TELEGRAM BOT FRAMEWORK
-## Create Everything <br/><br/><br/>
+### Create Everything <br/><br/><br/>
 
 
 ## Installition & Configration
-### clone this repository
+#### clone this repository
 ```
 git clone https://github.com/ArashAbedii/TeleBot
 ```
@@ -21,7 +21,7 @@ In the env.php you can define and setup every options on your bot that you want.
 <br/>
 
 ## necessary config fields
-### You should fill these settings
+#### You should fill these settings
 ```PHP
 define('DOMAIN','YOUR_DOMAIN'); //PUT YOUR ROOT DOMAIN LIKE: https://domain.com/mybot
 return [
@@ -34,14 +34,14 @@ return [
 ```
 <br/>
 
-### after config your bot now you need to set webHook
+#### after config your bot now you need to set webHook
 You can set webhook easily by running: <br/>
 ``` webhookHandler.php?set=1```
 
 <br/>
 </br/>
 
-## Create a simple bot
+### Create a simple bot
 
 go to the app/Controllers/MessageHandler.php file :
 
