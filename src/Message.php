@@ -8,7 +8,7 @@ class Message extends Update {
     }
 
     public function getMessageId(){
-        return $this->message->id;
+        return $this->message->message_id;
     }
 
     public static function text(){

@@ -1,5 +1,6 @@
 <?php
 
+use App\Controllers\ChannelPostHandler;
 use App\Controllers\MessageHandler;
 
 function config($fileName="env.php"){
@@ -14,4 +15,8 @@ function bot(){
 
 function messageHandler(){
     return new MessageHandler();
+}
+
+function channelPostHandler(){
+    return new ChannelPostHandler();
 }

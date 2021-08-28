@@ -4,10 +4,14 @@ use Src\Update;
 class Chat extends Update {
 
     public function getChatId(){
-        return $this->message->chat->id;
+
+        if($this->getType()=='message'){
+            return $this->message->chat->id;
+        }elseif($this->getType()=='callback_query'){
+            return $this->callback_query->message->chat->id;
+        }elseif($this->getType()=='channel_post'){
+           return $this->channel_post->chat->id;
+        }
     }
 
-    public function getMessageId(){
-        return $this->message->id;
-    }
 }

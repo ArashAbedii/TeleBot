@@ -62,7 +62,7 @@ class Update {
             //callbackquery
             $this->callback_query=$this->update->callback_query;
 
-        }elseif($this->type='inline_query'){
+        }elseif($this->type=='inline_query'){
             //inline query
             $this->inline_query=$this->update->inline_query;
 
