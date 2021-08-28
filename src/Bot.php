@@ -24,6 +24,10 @@ class Bot {
         return new ReplyKeyboardMarkup();
     }
 
+    public function audio(){
+        return new Audio();
+    }
+
 
 
 
