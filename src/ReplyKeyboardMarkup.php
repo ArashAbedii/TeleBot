@@ -5,10 +5,12 @@ namespace Src;
 class ReplyKeyboardMarkup extends Update {
 
 
+    //create kyboard rows object
     public static function create(array $rows,array $options=['resize_keyboard'=>true,'one_time_keyboard'=>false]){
         $keyboard=['keyboard'=>$rows,$options];
         return json_encode($keyboard);
     }
+
     //KEYBOARDS  PATERN LIKE: "$btn1--$btn2--$btn3//$btn4--$btn6//$btn7--$btn8"
     public static function createEasyier(string $patern,array $options=['resize_keyboard'=>true,'one_time_keyboard'=>false]){
         $rows=explode("//",$patern);
@@ -31,13 +33,4 @@ class ReplyKeyboardMarkup extends Update {
         
         return json_encode($options);
     }
-
-    // public static function answer(array $params=[]){
-    //     if(empty($params['callback_query_id'])){
-    //         $params=['callback_query_id'=>$this->callback_query->id,'cache_time'=>1];
-    //     }elseif(!isset($params['callback_query_id'])){
-    //         $params['callback_query_id']=$this->getCallbackQueryId();
-    //     }
-    //     $this->bot('answerCallbackQuery',$params);
-    // }
 }

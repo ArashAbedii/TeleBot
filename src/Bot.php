@@ -20,6 +20,11 @@ class Bot {
         return new Update();
     }
 
+    public function reply_markup(){
+        return new ReplyKeyboardMarkup();
+    }
+
+
 
 
 
