@@ -2,11 +2,8 @@
 
 namespace App\Controllers;
 
-
-class InlineQueryHandler{
-
+class EditedChannelPostHandler {
     public function run(){
         //code
     }
-
 }

@@ -2,11 +2,8 @@
 
 namespace App\Controllers;
 
-
-class InlineQueryHandler{
-
+class PollAnswerHandler {
     public function run(){
         //code
     }
-
 }

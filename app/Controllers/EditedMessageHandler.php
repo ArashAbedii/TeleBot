@@ -2,11 +2,8 @@
 
 namespace App\Controllers;
 
-
-class InlineQueryHandler{
-
+class EditedMessageHandler {
     public function run(){
         //code
     }
-
 }

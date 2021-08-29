@@ -2,11 +2,8 @@
 
 namespace App\Controllers;
 
-
-class InlineQueryHandler{
-
+class ChatMemberHandler {
     public function run(){
         //code
     }
-
 }
