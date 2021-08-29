@@ -5,5 +5,6 @@ namespace App\Controllers;
 class EditedChannelPostHandler {
     public function run(){
         //code
+        bot()->sendMessage(['text'=>'ok']);
     }
 }
