@@ -2,6 +2,8 @@
 
 namespace Src;
 
+use Src\UpdateTypes\Update;
+
 class ReplyKeyboardMarkup extends Update {
 
 

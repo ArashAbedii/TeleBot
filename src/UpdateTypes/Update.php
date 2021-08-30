@@ -1,6 +1,6 @@
 <?php
 
-namespace Src;
+namespace Src\UpdateTypes;
 
 class Update {
     private $id;

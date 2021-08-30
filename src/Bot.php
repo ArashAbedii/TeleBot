@@ -5,34 +5,6 @@ namespace Src;
 class Bot {
    
 
-    //RETURN MESSAGE OBJECT
-    public function message(){
-        return message();
-    }
-
-    //RETURN MESSAGE OBJECT
-    public function chat(){
-        return chat();
-    }
-
-    //RETURN MESSAGE OBJECT
-    public function update(){
-        return new Update();
-    }
-
-    //RETURN REPLY_KEYBOARDMARKUP OBJECT
-    public function reply_markup(){
-        return new ReplyKeyboardMarkup();
-    }
-
-    //Audio Object
-    public function audio(){
-        return new Audio();
-    }
-
-
-
-
 
     //HELPERS
 
@@ -42,7 +14,7 @@ class Bot {
 
     public function sendMessage(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('sendMessage',$params);
     }
@@ -50,7 +22,7 @@ class Bot {
 
     public function editMessageText(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('editMessageText',$params);
     }
@@ -58,7 +30,7 @@ class Bot {
 
     public function editMessageCaption(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('editMessageCaption',$params);
     }
@@ -66,7 +38,7 @@ class Bot {
 
     public function editMessageMedia(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('editMessageMedia',$params);
     }
@@ -74,7 +46,7 @@ class Bot {
 
     public function editMessageReplyMarkup(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('editMessageReplyMarkup',$params);
     }
@@ -82,7 +54,7 @@ class Bot {
 
     public function stopPoll(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('stopPoll',$params);
     }
@@ -90,7 +62,7 @@ class Bot {
 
     public function deleteMessage(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('deleteMessage',$params);
     }
@@ -98,7 +70,7 @@ class Bot {
 
     public function forwardMessage(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('forwardMessage',$params);
     }
@@ -106,7 +78,7 @@ class Bot {
 
     public function copyMessage(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('copyMessage',$params);
     }
@@ -114,7 +86,7 @@ class Bot {
 
     public function pinChatMessage(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('pinChatMessage',$params);
     }
@@ -122,7 +94,7 @@ class Bot {
 
     public function unpinChatMessage(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('unpinChatMessage',$params);
     }
@@ -135,7 +107,7 @@ class Bot {
     //----------------------AUDIO---------------------------
     public function sendAudio(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('sendAudio',$params);
     }
@@ -143,7 +115,7 @@ class Bot {
     //SEND VOICE
     public function sendVoice(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('sendVoice',$params);
     }
@@ -157,7 +129,7 @@ class Bot {
 
     public function sendPhoto(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('sendPhoto',$params);
     }
@@ -168,7 +140,7 @@ class Bot {
     //-------------------DOCUMENT-----------------------------
     public function sendDocument(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('sendDocument',$params);
     }
@@ -180,7 +152,7 @@ class Bot {
     //--------------------VIDEO-----------------------------
     public function sendVideo(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('sendVideo',$params);
     }
@@ -191,7 +163,7 @@ class Bot {
     //--------------------ANIMATION-----------------------
     public function sendAnimation(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('sendAnimation',$params);
     }
@@ -204,7 +176,7 @@ class Bot {
 
     public function sendMediaGroup(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('sendMediaGroup',$params);
     }
@@ -215,7 +187,7 @@ class Bot {
     //--------------------LOCATION---------------------
     public function sendLocation(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('sendLocation',$params);
     }
@@ -226,7 +198,7 @@ class Bot {
     //------------------CONTACT------------------------------
     public function sendContact(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('sendContact',$params);
     }
@@ -236,7 +208,7 @@ class Bot {
     //------------------POLL-----------------------------
     public function sendPoll(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('sendPoll',$params);
     }
@@ -248,7 +220,7 @@ class Bot {
     
     public function sendChatAction(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('sendChatAction',$params);
     }
@@ -256,7 +228,7 @@ class Bot {
 
     public function getUserProfilePhotos(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('getUserProfilePhotos',$params);
     }
@@ -264,7 +236,7 @@ class Bot {
 
     public function getFile(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('getFile',$params);
     }
@@ -272,7 +244,7 @@ class Bot {
 
     public function leaveChat(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('leaveChat',$params);
     }
@@ -280,7 +252,7 @@ class Bot {
 
     public function getChat(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('getChat',$params);
     }
@@ -288,7 +260,7 @@ class Bot {
 
     public function getChatAdministrators(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('getChatAdministrators',$params);
     }
@@ -296,7 +268,7 @@ class Bot {
 
     public function getChatMemberCount(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('getChatMemberCount',$params);
     }
@@ -304,7 +276,7 @@ class Bot {
 
     public function getChatMember(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('getChatMember',$params);
     }
@@ -316,7 +288,7 @@ class Bot {
     //----------------------CALLBACK_QUERY-----------------------
     public function answerCallbackQuery(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('answerCallbackQuery',$params);
     }
@@ -327,7 +299,7 @@ class Bot {
     //-------------------INLINE------------------
     public function answerInlineQuery(array $params){
         if(empty($params['chat_id'])){
-            $params['chat_id']=$this->chat()->getChatId();
+            $params['chat_id']=chat()->getChatId();
         }
         return $this->sendRequest('answerInlineQuery',$params);
     }
@@ -348,7 +320,7 @@ class Bot {
     }
 
     public function getUpdateType(){
-        return $this->update()->getType();
+        return update()->getType();
     }
 
     public static function setWebhook(){

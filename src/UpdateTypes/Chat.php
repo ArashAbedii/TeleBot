@@ -1,6 +1,6 @@
 <?php
-namespace Src;
-use Src\Update;
+namespace Src\UpdateTypes;
+
 class Chat extends Update {
 
     public function getChatId(){
