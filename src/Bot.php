@@ -7,12 +7,12 @@ class Bot {
 
     //RETURN MESSAGE OBJECT
     public function message(){
-        return new Message();
+        return message();
     }
 
     //RETURN MESSAGE OBJECT
     public function chat(){
-        return new Chat();
+        return chat();
     }
 
     //RETURN MESSAGE OBJECT

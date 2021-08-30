@@ -39,7 +39,7 @@ class Update {
             $this->type= 'channel_post';
         }elseif(!empty($this->update->edited_channel_post)){
             $this->type='edited_channel_post';
-        }elseif($this->update->inline_query){
+        }elseif(!empty($this->update->inline_query)){
             $this->type='inline_query';
         }elseif(!empty($this->update->chosen_inline_result)){
             $this->type='chosen_inline_result';
@@ -61,7 +61,7 @@ class Update {
         }elseif($this->type=='callback_query'){
             //callbackquery
             $this->callback_query=$this->update->callback_query;
-
+            $this->message=$this->update->callback_query->message;
         }elseif($this->type=='inline_query'){
             //inline query
             $this->inline_query=$this->update->inline_query;
