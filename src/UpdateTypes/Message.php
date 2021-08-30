@@ -1,6 +1,7 @@
 <?php
-namespace Src;
-use Src\Update;
+
+namespace Src\UpdateTypes;
+
 class Message extends Update {
 
     public function getText(){

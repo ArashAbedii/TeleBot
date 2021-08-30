@@ -1,6 +1,6 @@
 <?php
 
-namespace Src;
+namespace Src\UpdateTypes;
 
 class CallbackQuery extends Update {
     
@@ -11,7 +11,7 @@ class CallbackQuery extends Update {
         bot()->sendRequest('answerCallbackQuery',$params);
     }
 
-    public function getId(){
+    public function getCallbackQueryId(){
         return $this->callback_query->id;
     }
 
@@ -20,7 +20,7 @@ class CallbackQuery extends Update {
     }
 
     public function getMessage(){
-        return message();
+        return $this->callback_query->message;
     }
 
     public function getInlineMessageId(){

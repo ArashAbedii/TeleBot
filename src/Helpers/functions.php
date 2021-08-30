@@ -10,11 +10,13 @@ use App\Controllers\MessageHandler;
 use App\Controllers\MyChatMemberHandler;
 use App\Controllers\PollAnswerHandler;
 use App\Controllers\PollHandler;
-use Src\Audio;
-use Src\CallbackQuery;
-use Src\Chat;
-use Src\Message;
-use Src\Update;
+use Src\Media\Audio;
+use Src\UpdateTypes\CallbackQuery;
+use Src\UpdateTypes\Chat;
+use Src\UpdateTypes\Message;
+use Src\UpdateTypes\Update;
+use Src\Media\Video;
+use Src\Media\VideoNote;
 
 function config($fileName="env.php"){
     $conf=include($_SERVER['DOCUMENT_ROOT']."/config/$fileName");
@@ -72,17 +74,41 @@ function audio(){
     global $audioObjHandler;
 
     if($audioObjHandler instanceof Audio){
-       
-        bot()->sendMessage(['text'=>'old obj']);
+
         return $audioObjHandler;
 
     }else{
 
         $audioObjHandler= new Audio();
-        bot()->sendMessage(['text'=>'new obj']);
         return $audioObjHandler;
     }
 }
+//video object helper
+function video(){
+    global $videoObjHandler;
+
+    if($videoObjHandler instanceof Video){
+
+        return $videoObjHandler;
+
+    }else{
+
+        $videoObjHandler= new Video();
+        return $videoObjHandler;
+    }
+}
+
+//video note object helper
+function video_note(){
+    global $videoNoteObjHandler;
+    if($videoNoteObjHandler instanceof VideoNote){
+        return $videoNoteObjHandler;
+    }else{
+        $videoNoteObjHandler=new VideoNote();
+        return $videoNoteObjHandler;
+    }
+}
+
 
 //message object helper
 function message(){
@@ -106,7 +132,7 @@ function chat(){
     }
 }
 
-//chat object helper
+//update object helper
 function update(){
     global $updateObjHandler;
     if($updateObjHandler instanceof Update){

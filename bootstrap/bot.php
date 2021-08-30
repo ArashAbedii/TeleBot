@@ -5,47 +5,48 @@ require_once "../vendor/autoload.php";
 use Src\Bot;
 
 $bot=new Bot();
-// bot()->sendMessage(['text'=>callback_query()->getData()]);
+ //bot()->sendMessage(['text'=>message()->getText()]);
 // // file_put_contents('debug.txt',json_encode(bot()->update()));
 // die();
 
-if($bot->update()->getType()=='message'){
+
+if(update()->getType()=='message'){
 
     messageHandler()->run();
 
-}elseif(bot()->update()->getType()=='callback_query'){
+}elseif(update()->getType()=='callback_query'){
 
     callbackQueryHandler()->run();
 
-}elseif(bot()->update()->getType()=='channel_post'){
+}elseif(update()->getType()=='channel_post'){
 
     channelPostHandler()->run();
 
-}elseif(bot()->update()->getType()=='edited_message'){
+}elseif(update()->getType()=='edited_message'){
 
     editedMessageHandler()->run();
 
-}elseif(bot()->update()->getType()=='edited_channel_post'){
+}elseif(update()->getType()=='edited_channel_post'){
 
     editedChannelPostHandler()->run();
     
-}elseif(bot()->update()->getType()=='inline_query'){
+}elseif(update()->getType()=='inline_query'){
 
     inlineQueryHandler()->run();
     
-}elseif(bot()->update()->getType()=='poll'){
+}elseif(update()->getType()=='poll'){
 
     pollHandler()->run();
     
-}elseif(bot()->update()->getType()=='poll_answer'){
+}elseif(update()->getType()=='poll_answer'){
 
     pollAnswerHandler()->run();
     
-}elseif(bot()->update()->getType()=='my_chat_member'){
+}elseif(update()->getType()=='my_chat_member'){
 
     myChatMemberHandler()->run();
     
-}elseif(bot()->update()->getType()=='chat_member'){
+}elseif(update()->getType()=='chat_member'){
 
     chatMemberHandler()->run();
     
