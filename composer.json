@@ -7,7 +7,7 @@
             
             "Src\\":"src"
         },
-        "files": ["src/Helpers/functions.php"]
+        "files": ["src/Helpers/functions.php","src/Helpers/prevars.php"]
     }
 
 }

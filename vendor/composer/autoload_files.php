@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     '2eac8b36654cc60d3c7a9159fac87ca7' => $baseDir . '/src/Helpers/functions.php',
+    'e08198658c5242844d768fabc9a4e2cf' => $baseDir . '/src/Helpers/prevars.php',
 );
