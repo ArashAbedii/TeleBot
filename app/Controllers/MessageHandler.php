@@ -8,6 +8,6 @@ use Src\Message;
 class MessageHandler{
    public function run(){
       //do somethings
-      bot()->sendMessage(['text'=>chat()->getChatId()]);
+      //bot()->sendMessage(['text'=>chat()->getChatId()]);
    }
 }
