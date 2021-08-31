@@ -13,6 +13,10 @@ class Update {
     protected $inline_query;
     protected $chosen_inline_result;
     protected $callback_query;
+    protected $poll;
+    protected $poll_answer;
+    protected $my_chat_member;
+    protected $chat_member;
 
     public function __construct()
     {
@@ -45,6 +49,14 @@ class Update {
             $this->type='chosen_inline_result';
         }elseif(!empty($this->update->callback_query)){
             $this->type='callback_query';
+        }elseif(!empty($this->update->poll)){
+            $this->type='poll';
+        }elseif(!empty($this->update->poll_answer)){
+            $this->type='poll_answer';
+        }elseif(!empty($this->update->my_chat_member)){
+            $this->type='my_chat_member';
+        }elseif(!empty($this->update->chat_member)){
+            $this->type='chat_member';
         }else{
             $this->type= null;
         }
@@ -57,6 +69,7 @@ class Update {
         if($this->type=='message'){
             //message
             $this->message=$this->update->message;
+            $this->poll=$this->update->message->poll;
 
         }elseif($this->type=='callback_query'){
             //callbackquery
@@ -78,9 +91,21 @@ class Update {
             //edited channel post
             $this->edited_channel_post=$this->update->edited_channel_post;
 
-        }elseif($this->type=='chosen_inline_result'){
+        }elseif($this->type=='poll'){
             //chosen inline result
-            $this->chosen_inline_result=$this->update->chosen_inline_result;
+            $this->poll=$this->update->poll;
+
+        }elseif($this->type=='poll_answer'){
+            //chosen inline result
+            $this->poll_answer=$this->update->poll_answer;
+
+        }elseif($this->type=='my_chat_member'){
+            //chosen inline result
+            $this->my_chat_member=$this->update->my_chat_member;
+
+        }elseif($this->type=='chat_member'){
+            //chosen inline result
+            $this->chat_member=$this->update->chat_member;
 
         }
     }
@@ -88,6 +113,12 @@ class Update {
     //GET UPDATE TYPE
     public function getType(){
         return $this->type;
+    }
+
+    //GET UPDATE
+
+    public function getUpdate(){
+        return $this->update;
     }
 
 

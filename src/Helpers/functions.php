@@ -17,6 +17,7 @@ use Src\UpdateTypes\Message;
 use Src\UpdateTypes\Update;
 use Src\Media\Video;
 use Src\Media\VideoNote;
+use Src\UpdateTypes\Poll;
 
 function config($fileName="env.php"){
     $conf=include($_SERVER['DOCUMENT_ROOT']."/config/$fileName");
@@ -154,3 +155,13 @@ function callback_query(){
     }
 }
 
+//video note object helper
+function poll(){
+    global $pollObjHandler;
+    if($pollObjHandler instanceof Poll){
+        return $$pollObjHandler;
+    }else{
+        $pollObjHandler=new Poll();
+        return $pollObjHandler;
+    }
+}

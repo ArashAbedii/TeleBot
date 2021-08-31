@@ -5,9 +5,9 @@ require_once "../vendor/autoload.php";
 use Src\Bot;
 
 $bot=new Bot();
- //bot()->sendMessage(['text'=>message()->getText()]);
-// // file_put_contents('debug.txt',json_encode(bot()->update()));
-// die();
+ //bot()->sendMessage(['text'=>json_encode(poll()->get())]);
+ //file_put_contents('debug.txt',json_encode(update()->getUpdate()));
+ //die();
 
 
 if(update()->getType()=='message'){
