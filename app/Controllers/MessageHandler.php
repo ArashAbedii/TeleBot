@@ -2,12 +2,13 @@
 
 namespace App\Controllers;
 
-use Src\Message;
+use App\Modules\ExampleModule;
+
 
 
 class MessageHandler{
    public function run(){
       //do somethings
-      //bot()->sendMessage(['text'=>chat()->getChatId()]);
+      ExampleModule::run()->example();
    }
 }

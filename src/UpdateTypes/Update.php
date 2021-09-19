@@ -3,7 +3,7 @@
 namespace Src\UpdateTypes;
 
 class Update {
-    private $id;
+    
     private $type;
     public $update;
     protected $message;
@@ -69,7 +69,7 @@ class Update {
         if($this->type=='message'){
             //message
             $this->message=$this->update->message;
-            $this->poll=$this->update->message->poll;
+            $this->poll=!empty($this->update->message->poll) ? $this->update->message->poll : null;
 
         }elseif($this->type=='callback_query'){
             //callbackquery

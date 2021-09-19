@@ -3,12 +3,8 @@
 namespace Src;
 
 class Bot {
-   
-
 
     //HELPERS
-
-
 
     //----------------------MESSAGES---------------------------
 

@@ -1,5 +1,5 @@
 <?php
-define('DOMAIN','https://2ec4-46-105-77-111.ngrok.io');
+define('DOMAIN','https://0ec2-178-239-173-34.ngrok.io');
 
 
 
