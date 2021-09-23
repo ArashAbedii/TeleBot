@@ -293,11 +293,14 @@ class Bot {
 
 
     //-------------------INLINE------------------
-    public function answerInlineQuery(array $params){
+    public function answerInlineQuery($inlineQueryId,array $results,array $options=[]){
         if(empty($params['chat_id'])){
             $params['chat_id']=chat()->getChatId();
         }
-        return $this->sendRequest('answerInlineQuery',$params);
+        $options['inline_query_id']=$inlineQueryId;
+        $options['results']=json_encode($results);
+
+        return $this->sendRequest('answerInlineQuery',$options);
     }
     
     //-----------------END_INLINE---------------------------
@@ -338,4 +341,6 @@ class Bot {
         $reqUrl="https://api.telegram.org/bot$token/$method";
         return Server::sendRequest($reqUrl,$params,'post');
     }
+
+
 }

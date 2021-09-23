@@ -17,6 +17,7 @@ use Src\UpdateTypes\Message;
 use Src\UpdateTypes\Update;
 use Src\Media\Video;
 use Src\Media\VideoNote;
+use Src\UpdateTypes\InlineQuery;
 use Src\UpdateTypes\Poll;
 
 function config($fileName="env.php"){
@@ -133,6 +134,18 @@ function chat(){
     }
 }
 
+//inline query helper object
+function inlineQuery(){
+    global $inlineQueryObjHandler;
+    if($inlineQueryObjHandler instanceof InlineQuery){
+        return $inlineQueryObjHandler;
+    }else{
+        $inlineQueryObjHandler=new InlineQuery();
+        return $inlineQueryObjHandler;
+    }
+}
+
+
 //update object helper
 function update(){
     global $updateObjHandler;
@@ -164,4 +177,15 @@ function poll(){
         $pollObjHandler=new Poll();
         return $pollObjHandler;
     }
+}
+
+
+function checkValidLink($link){
+    
+    preg_match("/(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/",message()->getText(),$matches);
+
+    if($matches){
+        return $matches[1];
+    }
+    return false;
 }
