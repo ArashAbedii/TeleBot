@@ -189,3 +189,5 @@ function checkValidLink($link){
     }
     return false;
 }
+
+
