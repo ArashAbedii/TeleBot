@@ -8,4 +8,9 @@ return [
     'domain'=>DOMAIN,
     'request_handler_path'=>DOMAIN.'/requestsHandler.php',
     'bot_main_path'=>DOMAIN.'/bootstrap/bot.php',
+    'DB_CONNECTION'=>'sqlite',
+    'DB_NAME'=>'telebot',
+    'DB_USERNAME'=>'arash',
+    'DB_PASSWORD'=>'arash',
+    
 ];
