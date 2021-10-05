@@ -16,6 +16,10 @@ class ComposerStaticInit031c0315dd0fabacf978a4633e0284e4
         array (
             'Src\\' => 4,
         ),
+        'D' => 
+        array (
+            'Database\\' => 9,
+        ),
         'A' => 
         array (
             'App\\' => 4,
@@ -26,6 +30,10 @@ class ComposerStaticInit031c0315dd0fabacf978a4633e0284e4
         'Src\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Database\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/database',
         ),
         'App\\' => 
         array (
