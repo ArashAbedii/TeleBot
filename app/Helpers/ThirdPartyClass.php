@@ -2,10 +2,10 @@
 
 namespace App\Helpers;
 
-class ThiredPartyClass {
+class ThirdPartyClass {
 
     public static function run(){
-        return new ThiredPartyClass;
+        return new ThirdPartyClass;
     }
     
     public function sayHello(){

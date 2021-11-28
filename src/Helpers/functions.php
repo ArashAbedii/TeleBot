@@ -20,8 +20,8 @@ use Src\Media\VideoNote;
 use Src\UpdateTypes\InlineQuery;
 use Src\UpdateTypes\Poll;
 
-function config($fileName="env.php"){
-    $conf=include($_SERVER['DOCUMENT_ROOT']."/config/$fileName");
+function config($fileName="env"){
+    $conf=include($_SERVER['DOCUMENT_ROOT']."/config/$fileName.php");
     return $conf;
 }
 

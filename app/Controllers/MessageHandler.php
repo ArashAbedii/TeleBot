@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Helpers\ThiredPartyClass;
+use App\Helpers\ThirdPartyClass;
 use App\Modules\ExampleModule;
 
 class MessageHandler{
@@ -11,6 +11,6 @@ class MessageHandler{
       ExampleModule::run()->example();
 
       //use Thired party class
-      ThiredPartyClass::run()->sayHello();
+      ThirdPartyClass::run()->sayHello();
    }
 }
