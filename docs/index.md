@@ -101,7 +101,7 @@ You can find examples for nearly every MadelineProto function in
 
 # #Documentation
 
-* [Features](../v1/features.md)
+* [Features](v1/features.md)
 * Installiation
 * Handling updates
 * Database
