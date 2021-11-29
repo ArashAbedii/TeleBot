@@ -6,12 +6,6 @@ Created By [Arash Abedi](https://arashabedi.com)
 <br/>
 <br/>
 
-# what is this?
-this is a php framework that you can create any telegram bots simply by this framework
-
-<br/>
-<br/>
-
 # # Installation
 
 #### composer
@@ -68,49 +62,3 @@ webhookHandler.php?set=1
 ```
 
 <br/>
-<br/>
-
-## # Create a simple bot
-
-go to the app/Controllers/MessageHandler.php file :
-
-
-```php
-<?php
-
-namespace App\Controllers;
-
-use App\Modules\SayHello;
-use Src\Message;
-use Src\ReplyKeyboardMarkup;
-
-class MessageHandler extends Message {
-   public function run(){
-       bot()->sendMessage(['text'=>$this->getText()]); //insert this code
-   }
- }
-
-```
-
-Now start your bot in telegram, then this bot send you every text message that you send to bot. Yes you did it. good job :)
-
-<br/>
-
-# #Examples 
-
-You can find examples for nearly every MadelineProto function in
-....
-
-<br/>
-
-# #Documentation
-
-* [Features](v1/features.md)
-* [Installiation](v1/installiation.md)
-* [Handling updates](v1/updates.md)
-* [Database](v1/database.md)
-* [Chat](v1/chat.md)
-* [Messages](v1/messages.md)
-* [Files](v1/files.md)
-* [Methods](v1/methods.md)
-....
