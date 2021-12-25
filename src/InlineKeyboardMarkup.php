@@ -10,5 +10,4 @@ class InlineKeyboardMarkup extends Update {
         return json_encode(['inline_keyboard'=>$rows]);
     }
 
-
 }

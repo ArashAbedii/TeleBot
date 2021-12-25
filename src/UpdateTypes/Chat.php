@@ -2,25 +2,34 @@
 namespace Src\UpdateTypes;
 
 class Chat extends Update {
+    protected $chat_id;
+
+    public function __construct()
+    {
+        $this->setChatId();
+    }
 
     public function getChatId(){
+        return $this->chat_id;
+    }
 
+    private function setChatId(){
         if($this->getType()=='message'){
-            return $this->message->chat->id;
+            $this->chat_id= $this->message->chat->id;
         }elseif($this->getType()=='callback_query'){
-            return $this->callback_query->message->chat->id;
+            $this->chat_id= $this->callback_query->message->chat->id;
         }elseif($this->getType()=='channel_post'){
-           return $this->channel_post->chat->id;
+            $this->chat_id= $this->channel_post->chat->id;
         }elseif($this->getType()=='edited_channel_post'){
-            return $this->edited_channel_post->chat->id;
+            $this->chat_id= $this->edited_channel_post->chat->id;
         }elseif($this->getType()=='inline_query'){
-            return $this->inline_query->from->id;
+            $this->chat_id= $this->inline_query->from->id;
         }elseif($this->getType()==''){
-            //return $this->
+            //$this->chat_id= $this->
         }elseif($this->getType()==''){
-            //return $this->
+            //$this->chat_id= $this->
         }elseif($this->getType()==''){
-            //return $this->
+            //$this->chat_id= $this->
         }
     }
 

@@ -25,6 +25,8 @@ function config($fileName="env"){
     return $conf;
 }
 
+
+
 function bot(){
     global $bot;
     return $bot;
