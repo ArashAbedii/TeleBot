@@ -5,7 +5,8 @@
     "keywords": ["framework", "telebot"],
     "license": "MIT",
     "require": {
-        "php": "^7.3|^8.0"
+        "php": "^7.3|^8.0",
+        "arashabedii/telebot":"dev-master@dev"
     },
 
     "autoload": {
@@ -15,6 +16,8 @@
             "Database\\":"database"
         },
         "files": ["src/Helpers/functions.php","src/Helpers/prevars.php"]
-    }
+    },
 
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
