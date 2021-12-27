@@ -66,5 +66,5 @@ class MessageHandler extends Message {
 
 Now start your bot in telegram, then this bot send you every text message that you send to bot. Yes you did it. good job :)
 
-### Now you can read [Documentions](#) for creating every type of telegram bot.
+### Now you can read [Documentions](https://arashabedii.github.io/TeleBot) for creating every type of telegram bot.
 
