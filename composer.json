@@ -5,8 +5,7 @@
     "keywords": ["framework", "telebot"],
     "license": "MIT",
     "require": {
-        "php": "^7.3|^8.0",
-        "arashabedii/telebot":"dev-master@dev"
+        "php": "^7.3|^8.0"
     },
 
     "autoload": {
