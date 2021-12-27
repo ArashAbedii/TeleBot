@@ -15,6 +15,8 @@
             "Database\\":"database"
         },
         "files": ["src/Helpers/functions.php","src/Helpers/prevars.php"]
-    }
+    },
 
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
