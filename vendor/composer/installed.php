@@ -2,21 +2,21 @@
     'root' => array(
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'type' => 'library',
+        'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '8184df99050839aed6861590b83baa1d9a98e074',
-        'name' => '__root__',
+        'reference' => 'bfc2bce45f3249ecfb3d6d49303abce5abd010c7',
+        'name' => 'arashabedii/telebot',
         'dev' => true,
     ),
     'versions' => array(
-        '__root__' => array(
+        'arashabedii/telebot' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'type' => 'library',
+            'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '8184df99050839aed6861590b83baa1d9a98e074',
+            'reference' => 'bfc2bce45f3249ecfb3d6d49303abce5abd010c7',
             'dev_requirement' => false,
         ),
     ),

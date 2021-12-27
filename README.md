@@ -23,19 +23,23 @@ In the env.php you can define and setup every options on your bot that you want.
 ## necessary config fields
 #### You should fill these settings
 ```PHP
-define('DOMAIN','YOUR_DOMAIN'); //PUT YOUR ROOT DOMAIN LIKE: https://domain.com/mybot
-return [
-    'token'=>'YOUR_TOKEN', //PUT YOUR BOT TOKEN Insted of YOR_TOKEN
-    'domain'=>DOMAIN,
-    'request_handler_path'=>DOMAIN.'/requestsHandler.php',
-    'bot_main_path'=>DOMAIN.'/bootstrap/bot.php',
-];
+$domain='YOUR_DOMAIN'; //PUT YOUR BOT ROOT HERE EXAMPLE: https://example.com/mybotDirectory
 
+return [
+    'token'=>'YOUR_TOKEN', //PUT YOUR TOKEN HERE
+    'domain'=>$domain,
+    'request_handler_path'=>$domain.'/requestsHandler.php',
+    'bot_main_path'=>$domain.'/bootstrap/bot.php',
+    'DB_CONNECTION'=>'mysql', //DATABASE CONNECTION => mysql or sqlite 
+    'DB_NAME'=>'telebot',
+    'DB_USERNAME'=>'root',
+    'DB_PASSWORD'=>'',
+];
 ```
 <br/>
 
 #### after config your bot now you need to set webHook
-You can set webhook easily by running: <br/>
+You can set webhook simply by running: <br/>
 ``` webhookHandler.php?set=1```
 
 <br/>
@@ -50,9 +54,7 @@ go to the app/Controllers/MessageHandler.php file :
 
 namespace App\Controllers;
 
-use App\Modules\SayHello;
 use Src\Message;
-use Src\ReplyKeyboardMarkup;
 
 class MessageHandler extends Message {
    public function run(){
