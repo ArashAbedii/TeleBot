@@ -104,12 +104,12 @@ You can find examples for nearly every TeleBot function in
 
 # #Documentation
 
-* [Features](v1/features.md)
+* [Features](v1/features.md) (empty - need to complet)
 * [Installiation](v1/installiation.md)
 * [Handling updates](v1/updates.md)
-* [Database](v1/database.md)
-* [Chat](v1/chat.md)
-* [Messages](v1/messages.md)
-* [Files](v1/files.md)
-* [Methods](v1/methods.md)
+* [Database](v1/database.md) (empty - need to complet)
+* [Chat](v1/chat.md) (empty - need to complet)
+* [Messages](v1/messages.md) (empty - need to complet)
+* [Files](v1/files.md) (empty - need to complet)
+* [Methods](v1/methods.md) (empty - need to complet)
 ....
