@@ -43,16 +43,17 @@ In the env.php you can define and setup every options on your bot that you want.
 ```php
 <?php
 
-$domain='DOMAIN';  //PUT YOUR ROOT DOMAIN LIKE: https://domain.com/mybot
+
+$domain='YOUR_DOMAIN'; //PUT YOUR BOT ROOT HERE EXAMPLE: https://example.com/mybotDirectory
 
 return [
-    'token'=>'YOUR_TOKEN', //PUT YOUR BOT TOKEN Insted of YOR_TOKEN
+    'token'=>'YOUR_TOKEN', //PUT YOUR TOKEN HERE
     'domain'=>$domain,
     'request_handler_path'=>$domain.'/requestsHandler.php',
     'bot_main_path'=>$domain.'/bootstrap/bot.php',
-    'DB_CONNECTION'=>'sqlite', //sqlite or mysql
+    'DB_CONNECTION'=>'mysql', //DATABASE CONNECTION => mysql or sqlite 
     'DB_NAME'=>'telebot',
-    'DB_USERNAME'=>'',
+    'DB_USERNAME'=>'root',
     'DB_PASSWORD'=>'',
 ];
 ```
@@ -80,13 +81,11 @@ go to the app/Controllers/MessageHandler.php file :
 
 namespace App\Controllers;
 
-use App\Modules\SayHello;
 use Src\Message;
-use Src\ReplyKeyboardMarkup;
 
 class MessageHandler extends Message {
    public function run(){
-       bot()->sendMessage(['text'=>$this->getText()]); //insert this code
+       bot()->sendMessage(['text'=>message()->getText()]); //insert this code
    }
  }
 
@@ -98,7 +97,7 @@ Now start your bot in telegram, then this bot send you every text message that y
 
 # #Examples 
 
-You can find examples for nearly every MadelineProto function in
+You can find examples for nearly every TeleBot function in
 ....
 
 <br/>
@@ -108,8 +107,8 @@ You can find examples for nearly every MadelineProto function in
 * [Features](v1/features.md)
 * [Installiation](v1/installiation.md)
 * [Handling updates](v1/updates.md)
-* [Databases](v1/databases.md)
-* [Chats](v1/chats.md)
+* [Database](v1/database.md)
+* [Chat](v1/chat.md)
 * [Messages](v1/messages.md)
 * [Files](v1/files.md)
 * [Methods](v1/methods.md)

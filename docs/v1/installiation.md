@@ -1,3 +1,12 @@
+
+# TeleBot
+### Telegram Bot Framework for creating any bots 
+
+Created By [Arash Abedi](https://arashabedi.com)
+
+<br/>
+<br/>
+
 # # Installation
 
 #### composer
@@ -29,16 +38,17 @@ In the env.php you can define and setup every options on your bot that you want.
 ```php
 <?php
 
-$domain='DOMAIN';  //PUT YOUR ROOT DOMAIN LIKE: https://domain.com/mybot
+
+$domain='YOUR_DOMAIN'; //PUT YOUR BOT ROOT HERE EXAMPLE: https://example.com/mybotDirectory
 
 return [
-    'token'=>'YOUR_TOKEN', //PUT YOUR BOT TOKEN Insted of YOR_TOKEN
+    'token'=>'YOUR_TOKEN', //PUT YOUR TOKEN HERE
     'domain'=>$domain,
     'request_handler_path'=>$domain.'/requestsHandler.php',
     'bot_main_path'=>$domain.'/bootstrap/bot.php',
-    'DB_CONNECTION'=>'sqlite', //sqlite or mysql
+    'DB_CONNECTION'=>'mysql', //DATABASE CONNECTION => mysql or sqlite 
     'DB_NAME'=>'telebot',
-    'DB_USERNAME'=>'',
+    'DB_USERNAME'=>'root',
     'DB_PASSWORD'=>'',
 ];
 ```
@@ -53,5 +63,4 @@ You can set webhook easily by running: <br/>
 webhookHandler.php?set=1
 ```
 
-<br/>
 <br/>
