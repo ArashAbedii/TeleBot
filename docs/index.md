@@ -13,7 +13,6 @@ this is a php framework that you can create any telegram bots simply by this fra
 <br/>
 
 # # Installation
-
 ```
 composer create-project arashabedii/telebot
 ```
@@ -92,6 +91,7 @@ Now start your bot in telegram, then this bot send you every text message that y
 
 You can find examples for nearly every TeleBot function in
 ....
+
 
 <br/>
 
