@@ -2,11 +2,13 @@
 
 namespace Src;
 
+//CORE BOT CLASS
+
 class Bot {
 
-    //HELPERS
-
+    //chat_id generator
     public function paramsGenerator($params){
+
         if(empty($params['chat_id'])){
             $params['chat_id']=chat()->getChatId();
         }
@@ -77,7 +79,6 @@ class Bot {
 
 
     public function unpinChatMessage(array $params){
-
         return $this->sendRequest('unpinChatMessage',$this->paramsGenerator($params));
     }
 
@@ -255,40 +256,44 @@ class Bot {
 
 
 
-    static function redirectRequests($url=""){
-        $params=file_get_contents("php://input");
+    //--------------------------------------------REQUESTERS-------------------------------------------------------
 
+    //redirect all input requests from telegram servers
+    static function redirectRequests($url=""){
+
+        $params=file_get_contents("php://input");
         if(empty($url)){
             $url=config()['bot_main_path'];
         }
-
         return Server::sendRequestWithoutResponse($url,$params);
-
     }
 
+    //get telegram update types
     public function getUpdateType(){
         return update()->getType();
     }
 
+    //set webhook helper
     public static function setWebhook(){
         $token=config()['token'];
         $url=config()['request_handler_path'];
         $reqUrl="https://api.telegram.org/bot$token/setWebhook?url=$url";
-        var_dump(Server::sendRequest($reqUrl));
+        return Server::sendRequest($reqUrl);
     }
 
+    //delete webhook helper
     public static function deleteWebhook(){
         $token=config()['token'];
         $url=config()['request_handler_path'];
         $reqUrl="https://api.telegram.org/bot$token/deleteWebhook?url=$url";
-        var_dump(Server::sendRequest($reqUrl));
+       return Server::sendRequest($reqUrl);
     }
 
+    //create telegram request
     public static function sendRequest($method,array $params){
         $token=config()['token'];
         $reqUrl="https://api.telegram.org/bot$token/$method";
         return Server::sendRequest($reqUrl,$params,'post');
     }
-
 
 }

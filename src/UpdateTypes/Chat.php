@@ -2,11 +2,13 @@
 namespace Src\UpdateTypes;
 
 class Chat extends Update {
+
     protected $chat_id;
 
     public function __construct()
     {
         parent::__construct();
+      
         $this->setChatId();
     }
 

@@ -13,3 +13,4 @@ return [
     'DB_USERNAME'=>'root',
     'DB_PASSWORD'=>'',
 ];
+

@@ -116,7 +116,6 @@ class Update {
     }
 
     //GET UPDATE
-
     public function getUpdate(){
         return $this->update;
     }

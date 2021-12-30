@@ -20,30 +20,39 @@ use Src\Media\VideoNote;
 use Src\UpdateTypes\InlineQuery;
 use Src\UpdateTypes\Poll;
 
+//return configure files
 function config($fileName="env"){
-    $conf=include($_SERVER['DOCUMENT_ROOT']."/config/$fileName.php");
+    if(!empty($_SERVER['DOCUMENT_ROOT'])){
+        $conf=include($_SERVER['DOCUMENT_ROOT']."/config/$fileName.php");
+    }else{
+        $conf=include($_SERVER['PWD']."/config/$fileName.php");
+    }
+    
     return $conf;
 }
 
-
-
+//bot object
 function bot(){
     global $bot;
     return $bot;
 }
 
+//messageHandler object
 function messageHandler(){
     return new MessageHandler();
 }
 
+//channelPostHandler object
 function channelPostHandler(){
     return new ChannelPostHandler();
 }
 
+//callbackQueryHandler object
 function callbackQueryHandler(){
     return new CallbackQueryHandler();
 }
 
+//callbackQueryHandler object
 function inlineQueryHandler(){
     return new InlineQueryHandler();
 }

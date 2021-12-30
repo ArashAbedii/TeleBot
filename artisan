@@ -1,8 +1,11 @@
 <?php
 #!/usr/bin/env php
+include './vendor/autoload.php';
+
+use Src\Bot;
 
 $event=$argv[1];
-$moduleName=$argv[2];
+$moduleName=isset($argv[2]) ? $argv[2] : false;
 
 if($event=='make:module'){
     if(empty($moduleName)){
@@ -27,4 +30,8 @@ class '.$moduleName.' {
 }');
     echo "Your module created successfully\n";
     }
+}elseif($event=='set:webhook'){
+    print(Bot::setWebhook()."\n");
+}elseif($event=='delete:webhook'){
+    print(Bot::deleteWebhook()."\n");
 }
