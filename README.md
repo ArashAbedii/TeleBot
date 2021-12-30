@@ -38,9 +38,12 @@ return [
 ```
 <br/>
 
-#### after config your bot now you need to set webHook
-You can set webhook simply by running: <br/>
-``` webhookHandler.php?set=1```
+### after config your bot now you need to set webHook
+#### You can set webhook simply by running: <br/>
+this command ```php artisan set:webhook``` in your project root directory 
+<br>
+or run
+``` YOUR_DOMAIN/webhookHandler.php?set=1``` in your browser
 
 <br/>
 </br/>
