@@ -75,7 +75,7 @@ namespace App\Controllers;
 
 use Src\Message;
 
-class MessageHandler extends Message {
+class MessageHandler {
    public function run(){
        bot()->sendMessage(['text'=>message()->getText()]); //insert this code
    }
