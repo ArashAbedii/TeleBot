@@ -1,53 +1,73 @@
 <?php
+
 //BOOTSTRAP
 require_once "../vendor/autoload.php";
 
 use Src\Bot;
 
+//bot starter
 $bot=new Bot();
- //bot()->sendMessage(['text'=>json_encode(update()->getUpdate())]);
- //file_put_contents('debug.txt',json_encode(update()->getUpdate()));
- //die();
 
 
+//-------------------------------------------------------------------UPDATE HANDLERS----------------------------------------------------------------
+
+//handling message update
 if(update()->getType()=='message'){
 
     messageHandler()->run();
 
-}elseif(update()->getType()=='callback_query'){
+}
+//handling callback_query update
+elseif(update()->getType()=='callback_query'){
 
     callbackQueryHandler()->run();
 
-}elseif(update()->getType()=='channel_post'){
+}
+//handling channel_post update
+elseif(update()->getType()=='channel_post'){
 
     channelPostHandler()->run();
 
-}elseif(update()->getType()=='edited_message'){
+}
+//edited_message update
+elseif(update()->getType()=='edited_message'){
 
     editedMessageHandler()->run();
 
-}elseif(update()->getType()=='edited_channel_post'){
+}
+//handling edited_channel_post update
+elseif(update()->getType()=='edited_channel_post'){
 
     editedChannelPostHandler()->run();
     
-}elseif(update()->getType()=='inline_query'){
+}
+//handling inline_query update
+elseif(update()->getType()=='inline_query'){
 
     inlineQueryHandler()->run();
     
-}elseif(update()->getType()=='poll'){
+}
+//handling poll update
+elseif(update()->getType()=='poll'){
 
     pollHandler()->run();
     
-}elseif(update()->getType()=='poll_answer'){
+}
+//handling poll_answer update
+elseif(update()->getType()=='poll_answer'){
 
     pollAnswerHandler()->run();
     
-}elseif(update()->getType()=='my_chat_member'){
+}
+//handling my_chat_member update
+elseif(update()->getType()=='my_chat_member'){
 
     myChatMemberHandler()->run();
     
-}elseif(update()->getType()=='chat_member'){
+}
+//handling chat_member update
+elseif(update()->getType()=='chat_member'){
 
     chatMemberHandler()->run();
-    
+
 }

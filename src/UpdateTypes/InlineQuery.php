@@ -3,6 +3,7 @@
 namespace Src\UpdateTypes;
 
 class InlineQuery extends Update {
+    
     public function getId(){
         return $this->inline_query->id;
     }

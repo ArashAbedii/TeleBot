@@ -1,9 +1,12 @@
 <?php
+
 require_once './vendor/autoload.php';
 use Src\Bot;
 
+//webhook manul setting
+
 if(!empty($_GET['set'])){
-    Bot::setWebhook();
+    echo Bot::setWebhook();
 }elseif(!empty($_GET['delete'])){
-    Bot::deleteWebhook();
+    echo Bot::deleteWebhook();
 }
