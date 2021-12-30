@@ -1,10 +1,10 @@
 <?php
-$domain='https://806b-5-39-2-198.ngrok.io';
+$domain='DOMAIN';
 
 
 
 return [
-    'token'=>'632423848:AAECin8sUe_VdUqdAKnq8XlsAKSpUvqE2nU',
+    'token'=>'BOT_TOKEN',
     'domain'=>$domain,
     'request_handler_path'=>$domain.'/requestsHandler.php',
     'bot_main_path'=>$domain.'/bootstrap/bot.php',
