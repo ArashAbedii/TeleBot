@@ -8,7 +8,7 @@ class Chat extends Update {
     public function __construct()
     {
         parent::__construct();
-        
+      
         $this->setChatId();
     }
 

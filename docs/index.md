@@ -13,16 +13,8 @@ this is a php framework that you can create any telegram bots simply by this fra
 <br/>
 
 # # Installation
-
-#### composer
 ```
-composer require ...
-```
-### or
-
-#### clone this repository
-```
-git clone https://github.com/ArashAbedii/TeleBot
+composer create-project arashabedii/telebot
 ```
 
 <br/>
@@ -100,16 +92,17 @@ Now start your bot in telegram, then this bot send you every text message that y
 You can find examples for nearly every TeleBot function in
 ....
 
+
 <br/>
 
 # #Documentation
 
-* [Features](v1/features.md) (empty - need to complet)
+* [Features](v1/features.md) (empty - need to complete)
 * [Installiation](v1/installiation.md)
 * [Handling updates](v1/updates.md)
-* [Database](v1/database.md) (empty - need to complet)
-* [Chat](v1/chat.md) (empty - need to complet)
-* [Messages](v1/messages.md) (empty - need to complet)
-* [Files](v1/files.md) (empty - need to complet)
-* [Methods](v1/methods.md) (empty - need to complet)
+* [Database](v1/database.md) (empty - need to complete)
+* [Chat](v1/chat.md) (empty - need to complete)
+* [Messages](v1/messages.md) (empty - need to complete)
+* [Files](v1/files.md) (empty - need to complete)
+* [Methods](v1/methods.md) (empty - need to complete)
 ....

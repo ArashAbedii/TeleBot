@@ -3,9 +3,9 @@
 
 
 ## Installition & Configration
-#### clone this repository
+#### composer
 ```
-git clone https://github.com/ArashAbedii/TeleBot
+composer create-project arashabedii/telebot
 ```
 <br/>
 

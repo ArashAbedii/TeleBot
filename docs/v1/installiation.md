@@ -9,15 +9,9 @@ Created By [Arash Abedi](https://arashabedi.com)
 
 # # Installation
 
-#### composer
 ```
-composer require ...
-```
-### or
+composer create-project arashabedii/telebot
 
-#### clone this repository
-```
-git clone https://github.com/ArashAbedii/TeleBot
 ```
 
 <br/>
