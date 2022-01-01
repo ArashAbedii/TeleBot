@@ -17,6 +17,9 @@ class Update {
     protected $poll_answer;
     protected $my_chat_member;
     protected $chat_member;
+    protected $chat_join_request;
+    protected $pre_checkout_query; 
+    protected $shipping_query; 
 
     public function __construct()
     {
@@ -57,6 +60,12 @@ class Update {
             $this->type='my_chat_member';
         }elseif(!empty($this->update->chat_member)){
             $this->type='chat_member';
+        }elseif(!empty($this->update->chat_join_request)){
+            $this->type='chat_join_request';
+        }elseif(!empty($this->update->pre_checkout_query)){
+            $this->type='pre_checkout_query';
+        }elseif(!empty($this->update->shipping_query)){
+            $this->type='shipping_query';
         }else{
             $this->type= null;
         }
@@ -66,48 +75,98 @@ class Update {
     public function initUpdate(){
 
         //UPDATES TYPES
-        if($this->type=='message'){
-            //message
-            $this->message=$this->update->message;
-            $this->poll=!empty($this->update->message->poll) ? $this->update->message->poll : null;
 
-        }elseif($this->type=='callback_query'){
-            //callbackquery
-            $this->callback_query=$this->update->callback_query;
-            $this->message=$this->update->callback_query->message;
-        }elseif($this->type=='inline_query'){
-            //inline query
-            $this->inline_query=$this->update->inline_query;
+        switch($this->type){
 
-        }elseif($this->type=='edited_message'){
-            //edited_message
-            $this->edited_message=$this->update->edited_message;
 
-        }elseif($this->type=='channel_post'){
-            //channel post
-            $this->channel_post=$this->update->channel_post;
+            case 'message':
+                //message
+                $this->message=$this->update->message;
+                $this->poll=!empty($this->update->message->poll) ? $this->update->message->poll : null;
 
-        }elseif($this->type=='edited_channel_post'){
-            //edited channel post
-            $this->edited_channel_post=$this->update->edited_channel_post;
+            break;
 
-        }elseif($this->type=='poll'){
-            //chosen inline result
-            $this->poll=$this->update->poll;
 
-        }elseif($this->type=='poll_answer'){
-            //chosen inline result
-            $this->poll_answer=$this->update->poll_answer;
 
-        }elseif($this->type=='my_chat_member'){
-            //chosen inline result
-            $this->my_chat_member=$this->update->my_chat_member;
+            case 'callback_query':
+                //callbackquery
+                $this->callback_query=$this->update->callback_query;
+                $this->message=$this->update->callback_query->message;
+            break;
 
-        }elseif($this->type=='chat_member'){
-            //chosen inline result
-            $this->chat_member=$this->update->chat_member;
+
+
+            case 'inline_query':
+                //inline query
+                $this->inline_query=$this->update->inline_query;
+            break;
+
+
+
+            case 'edited_message':
+                //edited_message
+                $this->edited_message=$this->update->edited_message;
+            break;
+
+
+
+            case 'channel_post':
+                //channel post
+                $this->channel_post=$this->update->channel_post;
+            break;
+
+
+
+            case 'edited_channel_post':
+                //edited channel post
+                $this->edited_channel_post=$this->update->edited_channel_post;
+            break;
+                
+
+
+            case 'poll':
+                $this->poll=$this->update->poll;
+            break;
+
+
+
+            case 'poll_answer':
+                $this->poll_answer=$this->update->poll_answer;
+            break;
+
+
+            
+            case 'my_chat_member':
+                $this->my_chat_member=$this->update->my_chat_member;
+            break;
+
+
+
+            case 'chat_member':
+                $this->chat_member=$this->update->chat_member;
+            break;
+
+
+
+            case 'chat_join_request':
+                $this->chat_join_request=$this->update->chat_join_request;
+            break;
+
+
+
+            case 'pre_checkout_query':
+                $this->pre_checkout_query=$this->update->pre_checkout_query;
+            break;
+
+
+            
+            case 'shipping_query':
+                $this->shipping_query=$this->update->shipping_query;
+            break;
 
         }
+
+        
     }
 
     //GET UPDATE TYPE
