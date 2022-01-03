@@ -2,6 +2,7 @@
 
 use App\Controllers\CallbackQueryHandler;
 use App\Controllers\ChannelPostHandler;
+use App\Controllers\ChatJoinRequestHandler;
 use App\Controllers\ChatMemberHandler;
 use App\Controllers\EditedChannelPostHandler;
 use App\Controllers\EditedMessageHandler;
@@ -10,6 +11,7 @@ use App\Controllers\MessageHandler;
 use App\Controllers\MyChatMemberHandler;
 use App\Controllers\PollAnswerHandler;
 use App\Controllers\PollHandler;
+use App\Controllers\ShippingQueryHandler;
 use Src\Media\Audio;
 use Src\UpdateTypes\CallbackQuery;
 use Src\UpdateTypes\Chat;
@@ -17,8 +19,11 @@ use Src\UpdateTypes\Message;
 use Src\UpdateTypes\Update;
 use Src\Media\Video;
 use Src\Media\VideoNote;
+use Src\UpdateTypes\ChatJoinRequest;
 use Src\UpdateTypes\InlineQuery;
 use Src\UpdateTypes\Poll;
+use Src\UpdateTypes\PreCheckoutQuery;
+use Src\UpdateTypes\ShippingQuery;
 
 //return configure files
 function config($fileName="env"){
@@ -79,6 +84,19 @@ function pollHandler(){
 
 function pollAnswerHandler(){
     return new PollAnswerHandler();
+}
+
+
+function chatJoinRequestHandler(){
+    return new ChatJoinRequestHandler;
+}
+
+function shippingQueryHandler(){
+    return new ShippingQueryHandler;
+}
+
+function preCheckoutQueryHandler(){
+    return new PreCheckoutQuery;
 }
 
 
@@ -183,10 +201,43 @@ function callback_query(){
 function poll(){
     global $pollObjHandler;
     if($pollObjHandler instanceof Poll){
-        return $$pollObjHandler;
+        return $pollObjHandler;
     }else{
         $pollObjHandler=new Poll();
         return $pollObjHandler;
+    }
+}
+
+function chat_join_request(){
+    global $chatJoinRequestObjHandler;
+
+    if($chatJoinRequestObjHandler instanceof ChatJoinRequest){
+        $chatJoinRequestObjHandler;
+    }else{
+        $chatJoinRequestObjHandler=new ChatJoinRequest;
+        return $chatJoinRequestObjHandler;
+    }
+}
+
+function shipping_query(){
+    global $shippingQueryObjHandler;
+
+    if($shippingQueryObjHandler instanceof ShippingQuery){
+        $shippingQueryObjHandler;
+    }else{
+        $shippingQueryObjHandler=new ShippingQuery;
+        return $shippingQueryObjHandler;
+    }
+}
+
+function pre_checkout_query(){
+    global $preCheckoutQueryObjHandler;
+
+    if($preCheckoutQueryObjHandler instanceof PreCheckoutQuery){
+        $preCheckoutQueryObjHandler;
+    }else{
+        $preCheckoutQueryObjHandler=new PreCheckoutQuery;
+        return $preCheckoutQueryObjHandler;
     }
 }
 
