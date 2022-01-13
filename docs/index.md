@@ -102,7 +102,5 @@ You can find examples for nearly every TeleBot function in
 * [Handling updates](v1/updates.md)
 * [Database](v1/database.md) (empty - need to complete)
 * [Chat](v1/chats.md)
-* [Messages](v1/messages.md) (empty - need to complete)
-* [Files](v1/files.md) (empty - need to complete)
-* [Methods](v1/methods.md) (empty - need to complete)
+* [Methods](v1/methods.md) (need to complete)
 ....
