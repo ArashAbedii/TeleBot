@@ -27,12 +27,12 @@ use Src\UpdateTypes\ShippingQuery;
 
 //return configure files
 function config($fileName="env"){
-    if(!empty($_SERVER['DOCUMENT_ROOT'])){
-        $conf=include($_SERVER['DOCUMENT_ROOT']."/config/$fileName.php");
-    }else{
-        $conf=include($_SERVER['PWD']."/config/$fileName.php");
-    }
-    
+    // if(!empty($_SERVER['DOCUMENT_ROOT'])){
+    //     $conf=include($_SERVER['DOCUMENT_ROOT']."/config/$fileName.php");
+    // }else{
+    //     $conf=include($_SERVER['PWD']."/config/$fileName.php");
+    // }
+    $conf=include(dirname(dirname(__DIR__))."/config/$fileName.php");
     return $conf;
 }
 
