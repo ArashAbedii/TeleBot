@@ -3,6 +3,7 @@
 include './vendor/autoload.php';
 
 use Src\Bot;
+use Src\CommandFactory\ModelMaker;
 
 $event=$argv[1];
 $moduleName=isset($argv[2]) ? $argv[2] : false;
@@ -34,4 +35,6 @@ class '.$moduleName.' {
     print(Bot::setWebhook()."\n");
 }elseif($event=='delete:webhook'){
     print(Bot::deleteWebhook()."\n");
+}elseif($event=='make:model'){
+    print(ModelMaker::create($moduleName));
 }
