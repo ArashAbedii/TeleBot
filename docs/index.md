@@ -97,10 +97,10 @@ You can find examples for nearly every TeleBot function in
 
 # #Documentation
 
-* [Features](v1/features.md) (empty - need to complete)
+* [Features](v1/features.md)
 * [Installiation](v1/installiation.md)
-* [Handling updates](v1/updates.md)
+* [Handling updates (new messages)](v1/updates.md)
 * [Database](v1/database.md) (empty - need to complete)
-* [Chat](v1/chats.md)
+* [Types (updates objects)](v1/types.md)
 * [Methods](v1/methods.md) (need to complete)
 ....
