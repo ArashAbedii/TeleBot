@@ -252,4 +252,16 @@ function checkValidLink($link){
     return false;
 }
 
+function debug($input){
+    bot()->sendMessage(['text'=>$input,'chat_id'=>config()['ADMIN_CHAT_ID']]);
+}
+
+function fastDebug(){
+    debug(json_encode(update()->getUpdate()));
+    die();
+}
+
+function admin(){
+    return config()['ADMIN_CHAT_ID'];
+}
 
