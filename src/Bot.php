@@ -18,6 +18,10 @@ class Bot {
 
     //----------------------MESSAGES---------------------------
 
+    public function getMe(){
+        return $this->sendRequest('getMe');
+    }
+
     public function sendMessage(array $params){
 
         return $this->sendRequest('sendMessage',$this->paramsGenerator($params));
@@ -205,7 +209,7 @@ class Bot {
     }
 
 
-    public function getChat(array $params){
+    public function getChat(array $params=[]){
 
         return $this->sendRequest('getChat',$this->paramsGenerator($params));
     }
@@ -290,7 +294,7 @@ class Bot {
     }
 
     //create telegram request
-    public static function sendRequest($method,array $params){
+    public static function sendRequest($method,array $params=[]){
         $token=config()['token'];
         $reqUrl="https://api.telegram.org/bot$token/$method";
         return Server::sendRequest($reqUrl,$params,'post');

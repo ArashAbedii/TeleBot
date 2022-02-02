@@ -1,7 +1,9 @@
 
 <?php
 
-function inlineTextButtonsCreator($cols,$rows,array $data){
+function inlineTextButtonsCreator($cols,$rows,array $data,$pagination=false){
+
+    $perpage=$cols*$rows;
 
     $index=0;
     for($i=0;$i<$rows;$i++){
@@ -12,6 +14,10 @@ function inlineTextButtonsCreator($cols,$rows,array $data){
             $inlineButtons[$i][]=['text'=>$data[$index]['text'],"$type"=>"$value"];
             $index++;
         }
+    }
+
+    if($pagination){
+        
     }
 
     return $inlineButtons;
