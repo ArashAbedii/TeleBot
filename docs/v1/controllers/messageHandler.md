@@ -6,7 +6,7 @@ Created By [Arash Abedi](https://arashabedi.com)
 <br/>
 <br/>
 
-# Message Handler
+# Message Handler (new messages)
 
 all updates by type message come to this class and you can work on every messages update comfortably.
 <br>

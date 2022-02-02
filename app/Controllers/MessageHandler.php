@@ -5,6 +5,7 @@ namespace App\Controllers;
 use Src\InlineKeyboardMarkup;
 use Src\ReplyKeyboardMarkup;
 
+
 class MessageHandler{
 
    //main method
@@ -21,8 +22,7 @@ class MessageHandler{
                   'parse_mode'=>'html',
                   'disable_web_page_preview'=>true,
                   //KEYBOARDS  PATERN LIKE: "$btn1--$btn2--$btn3//$btn4--$btn6//$btn7--$btn8::request_location"
-                  'reply_markup'=>ReplyKeyboardMarkup::createEasyier("Inline--Shere Contact::request_contact//share location::request_location"),
-                  
+                  'reply_markup'=>ReplyKeyboardMarkup::createEasyier("Inline--Shere Contact::request_contact//share location::request_location"),         
             ]
          );
       }elseif(message()->getText()=='Inline'){
@@ -50,6 +50,6 @@ class MessageHandler{
                   'reply_markup'=>InlineKeyboardMarkup::create($rows),
                ]
             );
-      }
+}
    }
 }

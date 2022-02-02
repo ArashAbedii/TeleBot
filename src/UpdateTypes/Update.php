@@ -25,7 +25,7 @@ class Update {
     {
         //GET UPDATES
         $this->update=json_decode(file_get_contents("php://input"));
-
+    
         //SET UPDATE TYPE
         $this->setUpdateType();
 

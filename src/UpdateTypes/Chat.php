@@ -27,8 +27,8 @@ class Chat extends Update {
             $this->chat_id= $this->edited_channel_post->chat->id;
         }elseif($this->getType()=='inline_query'){
             $this->chat_id= $this->inline_query->from->id;
-        }elseif($this->getType()==''){
-            //$this->chat_id= $this->
+        }elseif($this->getType()=='edited_message'){
+            $this->chat_id= $this->edited_message->chat->id;
         }elseif($this->getType()==''){
             //$this->chat_id= $this->
         }elseif($this->getType()==''){
