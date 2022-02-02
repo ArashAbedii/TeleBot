@@ -5,11 +5,12 @@ namespace Src\UpdateTypes;
 class Message extends Update {
 
     public function getText(){
-        return $this->message->text;
+ 
+        return $this->{$this->gettype()}->text;
     }
 
     public function getMessageId(){
-        return $this->message->message_id;
+        return $this->{$this->gettype()}->message_id;
     }
 
     public static function text(){
@@ -18,218 +19,218 @@ class Message extends Update {
     }
 
     public function getFrom(){
-        return $this->message->from;
+        return $this->{$this->gettype()}->from;
     }
 
     public function getSenderChat(){
-        return $this->message->sender_chat;
+        return $this->{$this->gettype()}->sender_chat;
     }
 
     public function getDate(){
-        return $this->message->date;
+        return $this->{$this->gettype()}->date;
     }
 
     public function getChat(){
-        return $this->message->chat;
+        return $this->{$this->gettype()}->chat;
     }
 
     public function getForwardFrom(){
-        return $this->message->forward_from;
+        return $this->{$this->gettype()}->forward_from;
     }
 
     public function getforwardFromChat(){
-        return $this->message->forward_from_chat;
+        return $this->{$this->gettype()}->forward_from_chat;
     }
 
     public function getForwardFromMessageId(){
-        return $this->message->forward_from_message_id;
+        return $this->{$this->gettype()}->forward_from_message_id;
     }
 
     public function getForwardSignature(){
-        return $this->message->forward_signature;
+        return $this->{$this->gettype()}->forward_signature;
     }
 
     public function getForwardSenderName(){
-        return $this->message->forward_sender_name;
+        return $this->{$this->gettype()}->forward_sender_name;
     }
 
     public function getForwardDate(){
-        return $this->message->forward_date;
+        return $this->{$this->gettype()}->forward_date;
     }
 
     public function getReplyToMessage(){
-        return $this->message->reply_to_message;
+        return $this->{$this->gettype()}->reply_to_message;
     }
 
     public function getViaBot(){
-        return $this->message->via_bot;
+        return $this->{$this->gettype()}->via_bot;
     }
 
     public function getEditDate(){
-        return $this->message->edit_date;
+        return $this->{$this->gettype()}->edit_date;
     }
 
     public function getMediaGroupId(){
-        return $this->message->media_group_id;
+        return $this->{$this->gettype()}->media_group_id;
     }
 
     public function getAuthorSignature(){
-        return $this->message->author_signature;
+        return $this->{$this->gettype()}->uthor_signature;
     }
 
     public function getEntities(){
-        return $this->message->entities;
+        return $this->{$this->gettype()}->entities;
     }
 
     public function getAnimation(){
-        return $this->message->animation;
+        return $this->{$this->gettype()}->animation;
     }
 
     public function getAudio(){
-        return $this->message->audio;
+        return $this->{$this->gettype()}->audio;
     }
 
     public function getDocument(){
-        return $this->message->document;
+        return $this->{$this->gettype()}->document;
     }
 
     public function getPhoto(){
-        return $this->message->photo;
+        return $this->{$this->gettype()}->photo;
     }
 
     public function getSticker(){
-        return $this->message->sticker;
+        return $this->{$this->gettype()}->sticker;
     }
 
     public function getVideo(){
-        return $this->message->video;
+        return $this->{$this->gettype()}->video;
     }
 
     public function getVideoNote(){
-        return $this->message->video_note;
+        return $this->{$this->gettype()}->video_note;
     }
 
     public function getVoice(){
-        return $this->message->voice;
+        return $this->{$this->gettype()}->voice;
     }
 
     public function getCaption(){
-        return $this->message->caption;
+        return $this->{$this->gettype()}->caption;
     }
 
     public function getCaptionEntities(){
-        return $this->message->caption_entities;
+        return $this->{$this->gettype()}->caption_entities;
     }
 
     public function getContact(){
-        return $this->message->contact;
+        return $this->{$this->gettype()}->contact;
     }
 
     public function getDice(){
-        return $this->message->dice;
+        return $this->{$this->gettype()}->dice;
     }
 
     public function getGame(){
-        return $this->message->game;
+        return $this->{$this->gettype()}->game;
     }
 
     public function getPoll(){
-        return $this->message->poll;
+        return $this->{$this->gettype()}->poll;
     }
 
     public function getVenue(){
-        return $this->message->venue;
+        return $this->{$this->gettype()}->venue;
     }
 
     public function getlocation(){
-        return $this->message->location;
+        return $this->{$this->gettype()}->location;
     }
 
     public function getnewChatMembers(){
-        return $this->message->new_chat_members;
+        return $this->{$this->gettype()}->new_chat_members;
     }
 
     public function getLeftChatMember(){
-        return $this->message->left_chat_member;
+        return $this->{$this->gettype()}->left_chat_member;
     }
 
     public function getNewChatTitle(){
-        return $this->message->new_chat_title;
+        return $this->{$this->gettype()}->new_chat_title;
     }
 
     public function getNewChatPhoto(){
-        return $this->message->new_chat_photo;
+        return $this->{$this->gettype()}->new_chat_photo;
     }
 
     public function getDeleteChatPhoto(){
-        return $this->message->delete_chat_photo;
+        return $this->{$this->gettype()}->delete_chat_photo;
     }
 
     public function getGroupChatCreated(){
-        return $this->message->group_chat_created;
+        return $this->{$this->gettype()}->group_chat_created;
     }
 
     public function getSupergroupChatCreated(){
-        return $this->message->supergroup_chat_created;
+        return $this->{$this->gettype()}->supergroup_chat_created;
     }
 
     public function getChannelChatCreated(){
-        return $this->message->channel_chat_created;
+        return $this->{$this->gettype()}->channel_chat_created;
     }
 
     public function getMessageAutoDeleteTimerChanged(){
-        return $this->message->message_auto_delete_timer_changed;
+        return $this->{$this->gettype()}->message_auto_delete_timer_changed;
     }
 
     public function getMigrateToChatId(){
-        return $this->message->migrate_to_chat_id;
+        return $this->{$this->gettype()}->migrate_to_chat_id;
     }
 
     public function getMigrateFromChatId(){
-        return $this->message->migrate_from_chat_id;
+        return $this->{$this->gettype()}->migrate_from_chat_id;
     }
 
     public function getPinnedMessage(){
-        return $this->message->pinned_message;
+        return $this->{$this->gettype()}->pinned_message;
     }
 
     public function getInvoice(){
-        return $this->message->invoice;
+        return $this->{$this->gettype()}->invoice;
     }
 
     public function getSuccessfulPayment(){
-        return $this->message->successful_payment;
+        return $this->{$this->gettype()}->successful_payment;
     }
 
     public function getConnectedWebsite(){
-        return $this->message->connected_website;
+        return $this->{$this->gettype()}->connected_website;
     }
 
     public function getPassportData(){
-        return $this->message->passport_data;
+        return $this->{$this->gettype()}->passport_data;
     }
 
     public function getProximityAlertTriggered(){
-        return $this->message->proximity_alert_triggered;
+        return $this->{$this->gettype()}->proximity_alert_triggered;
     }
 
     public function getVoiceChatScheduled(){
-        return $this->message->voice_chat_scheduled;
+        return $this->{$this->gettype()}->voice_chat_scheduled;
     }
 
     public function getVoiceChatStarted(){
-        return $this->message->voice_chat_started;
+        return $this->{$this->gettype()}->voice_chat_started;
     }
 
     public function getVoiceChatEnded(){
-        return $this->message->voice_chat_ended;
+        return $this->{$this->gettype()}->voice_chat_ended;
     }
 
     public function getVoiceChatParticipantsInvited(){
-        return $this->message->voice_chat_participants_invited;
+        return $this->{$this->gettype()}->voice_chat_participants_invited;
     }
 
     public function getReplyMarkup(){
-        return $this->message->reply_markup;
+        return $this->{$this->gettype()}->reply_markup;
     }
 }
