@@ -1,8 +1,6 @@
 <?php
 $server_address='SERVER_ADDRESS'; //PUT YOUR BOT ROOT HERE EXAMPLE: http://192.168.1.9:8000/mybotDirectory
 
-
-
 return [
     'token'=>'BOT_TOKEN', //PUT YOUR BOT TOKEN HERE
     'ADMIN_CHAT_ID'=>'YOUR_CHAT_ID', //PUT YOUR CHAT_ID HERE
