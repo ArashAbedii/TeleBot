@@ -263,12 +263,20 @@ class Bot {
     //--------------------------------------------REQUESTERS-------------------------------------------------------
 
     //redirect all input requests from telegram servers
-    static function redirectRequests($url=""){
+    static function redirectRequests($url="",$params=null){
 
-        $params=file_get_contents("php://input");
+        if(!$params){
+            $params=file_get_contents("php://input");
+        }
+       
         if(empty($url)){
             $url=config()['bot_main_path'];
         }
+
+        if(empty($params)){
+            return null;
+        }
+        
         return Server::sendRequestWithoutResponse($url,$params);
     }
 

@@ -52,8 +52,9 @@ class Server{
 
     //SEND REQUEST WITHOUT RESPONSE
 
-    public static function sendRequestWithoutResponse($url,$params=[]){
+    public static function sendRequestWithoutResponse($url,$params){
         $ch=curl_init();
+        
         curl_setopt($ch,CURLOPT_URL,$url);
         curl_setopt($ch,CURLOPT_POSTFIELDS,$params);
         curl_setopt($ch,CURLOPT_RETURNTRANSFER,false);
