@@ -6,7 +6,7 @@ return [
     'ADMIN_CHAT_ID'=>'YOUR_CHAT_ID', //PUT YOUR CHAT_ID HERE
     'domain'=>$server_address,
     'request_handler_path'=>$server_address.'/requestsHandler.php',
-    'bot_main_path'=>$domain.'/bootstrap/bot.php',
+    'bot_main_path'=>$server_address.'/bootstrap/bot.php',
     'DB_CONNECTION'=>'mysql', //or sqlite
     'DB_NAME'=>'telebot',
     'DB_USERNAME'=>'root',
