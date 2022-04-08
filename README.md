@@ -51,7 +51,7 @@ return [
 with long polling way you can run bots without any domain and ssl and so on <br>
 you can run the bot everywhere like: on your server or local machine
 <br>
-open terminal in tour bot directory and run this command:
+open terminal in your bot directory and run this command:
 ```
 php artisan run:bot --long-polling
 
