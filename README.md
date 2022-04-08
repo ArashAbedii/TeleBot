@@ -3,6 +3,8 @@
 
 
 ## Installition & Configration
+<br>
+
 #### composer
 ```
 composer create-project arashabedii/telebot
@@ -23,27 +25,56 @@ In the env.php you can define and setup every options on your bot that you want.
 ## necessary config fields
 #### You should fill these settings
 ```PHP
-$domain='YOUR_DOMAIN'; //PUT YOUR BOT ROOT HERE EXAMPLE: https://example.com/mybotDirectory
+<?php
+$server_address='SERVER_ADDRESS'; //PUT YOUR BOT ROOT HERE EXAMPLE: http://185.250.01.90:8000/mybotDirectory
 
 return [
-    'token'=>'YOUR_TOKEN', //PUT YOUR TOKEN HERE
-    'domain'=>$domain,
-    'request_handler_path'=>$domain.'/requestsHandler.php',
-    'bot_main_path'=>$domain.'/bootstrap/bot.php',
-    'DB_CONNECTION'=>'mysql', //DATABASE CONNECTION => mysql or sqlite 
+    'token'=>'BOT_TOKEN', //PUT YOUR BOT TOKEN HERE
+    'ADMIN_CHAT_ID'=>'YOUR_CHAT_ID', //PUT YOUR CHAT_ID HERE
+    'domain'=>$server_address,
+    'request_handler_path'=>$server_address.'/requestsHandler.php',
+    'bot_main_path'=>$server_address.'/bootstrap/bot.php',
+    'DB_CONNECTION'=>'mysql', //or sqlite
     'DB_NAME'=>'telebot',
     'DB_USERNAME'=>'root',
     'DB_PASSWORD'=>'',
 ];
+
 ```
 <br/>
 
-### after config your bot now you need to set webHook
-#### You can set webhook simply by running: <br/>
-this command ```php artisan set:webhook``` in your project root directory 
+## Run bots
+
 <br>
+
+### Long Polling
+with long polling way you can run bots without any domain and ssl and so on <br>
+you can run the bot everywhere like: on your server or local machine
+<br>
+open terminal in tour bot directory and run this command:
+```
+php artisan run:bot --long-polling
+
+```
+
+### webhook
+you can use webhook too for running your bots
+
+#### You can set webhook simply by running this command: <br/>
+```
+php artisan set:webhook
+
+```
+<br>
+
 or run
-``` YOUR_DOMAIN/webhookHandler.php?set=1``` in your browser
+
+``` 
+YOUR_DOMAIN/webhookHandler.php?set=1
+
+```
+
+in your browser
 
 <br/>
 
