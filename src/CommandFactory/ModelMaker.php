@@ -7,7 +7,7 @@ class ModelMaker{
         $loname=strtolower($name);
         $tableName=$loname."s";
 
-        $content="<?php\n\nnamespace App\Models;\n\nuse Database\Model;\n\nclass $name extends Model {\n\n\tprotected \$table='$tableName';\n\n\tpublic function get$name(\$id){\n\t\treturn \$this->select(\"select * from \$this->table where id='\$id'\");\n\t}\n}";
+        $content="<?php\n\nnamespace App\Models;\n\nuse Illuminate\Database\Eloquent\Model as Model;\n\n\nclass $name extends Model {\n\n}";
 
         $result=file_put_contents(dirname(dirname(__DIR__)).'/app/Models/'.$name.'.php',$content);
 
