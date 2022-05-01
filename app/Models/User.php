@@ -2,12 +2,8 @@
 
 namespace App\Models;
 
-use Database\Model;
+use Illuminate\Database\Eloquent\Model as Model;
 
 class User extends Model {
-    protected $table='users';
 
-    public function getUser($id){
-        return $this->select("select * from $this->table where id='$id'");
-    }
 }

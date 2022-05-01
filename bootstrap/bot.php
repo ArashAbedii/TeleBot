@@ -4,9 +4,11 @@
 require_once "../vendor/autoload.php";
 
 use Src\Bot;
+use Src\DBHandler;
 
 //bot starter
 $bot=new Bot();
+DBHandler::setup(true);
 
 
 //-------------------------------------------------------------------UPDATE HANDLERS----------------------------------------------------------------
