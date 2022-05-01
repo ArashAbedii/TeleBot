@@ -265,3 +265,21 @@ function admin(){
     return config()['ADMIN_CHAT_ID'];
 }
 
+//code generator
+function hashMaker($chars="abcdefg123456",$len=5){
+
+    $newWord=str_shuffle($chars);
+
+    $newWordArr=str_split($newWord);
+
+    $countChar=count($newWordArr);
+
+    $output='';
+
+    for($i=0;$i<$len;$i++){
+        $output.=$newWordArr[rand(0,$countChar-1)];
+    }
+
+    return $output;
+}
+
