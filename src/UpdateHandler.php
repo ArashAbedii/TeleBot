@@ -2,6 +2,7 @@
 
 namespace Src;
 
+use ArashAbedii\Server;
 
 class UpdateHandler{
 

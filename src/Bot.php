@@ -2,6 +2,8 @@
 
 namespace Src;
 
+use ArashAbedii\Server;
+
 //CORE BOT CLASS
 
 class Bot {
@@ -277,7 +279,7 @@ class Bot {
             return null;
         }
         
-        return Server::sendRequestWithoutResponse($url,$params);
+        return Server::sendRequestWithoutResponse($url,'post',$params);
     }
 
     //get telegram update types
