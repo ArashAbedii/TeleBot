@@ -12,7 +12,7 @@ $bot=new Bot();
 DBHandler::setup(true);
 
 //lock channel
-Utilities::lock_on_channels(['-1001151835046'],message()->getFrom()->id,'join to channel');
+// Utilities::lock_on_channels(['-1001151835046'],message()->getFrom()->id,'join to channel');
 
 //-------------------------------------------------------------------UPDATE HANDLERS----------------------------------------------------------------
 
