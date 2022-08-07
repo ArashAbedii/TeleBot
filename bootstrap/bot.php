@@ -5,11 +5,14 @@ require_once "../vendor/autoload.php";
 
 use Src\Bot;
 use Src\DBHandler;
+use Src\Helpers\Utilities;
 
 //bot starter
 $bot=new Bot();
 DBHandler::setup(true);
 
+//lock channel
+Utilities::lock_on_channels(['-1001151835046'],message()->getFrom()->id,'join to channel');
 
 //-------------------------------------------------------------------UPDATE HANDLERS----------------------------------------------------------------
 
