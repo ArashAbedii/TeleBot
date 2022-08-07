@@ -3,6 +3,7 @@
 include './vendor/autoload.php';
 
 use Src\Bot;
+use Src\CommandFactory\LockAddMember;
 use Src\CommandFactory\LongPolling;
 use Src\CommandFactory\ModelMaker;
 
@@ -33,6 +34,8 @@ class '.$moduleName.' {
     print(Bot::deleteWebhook()."\n");
 }elseif($event=='make:model'){
     print(ModelMaker::create($moduleName));
+}elseif($event=='install:lock_add_member'){
+    print(LockAddMember::install());
 }elseif($event=='run:bot' && $moduleName=='--long-polling'){
     print("Bot is running ...");
     print(LongPolling::run());
