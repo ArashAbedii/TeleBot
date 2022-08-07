@@ -11,8 +11,14 @@ use Src\Helpers\Utilities;
 $bot=new Bot();
 DBHandler::setup(true);
 
+
 //lock channel
 // Utilities::lock_on_channels(['-1001151835046'],message()->getFrom()->id,'join to channel');
+
+//lock add memeber
+// $count_added_memeber=Utilities::getCountAddedMemeber(message()->getFrom()->id);
+// Utilities::lock_on_add_member(3,message()->getFrom()->id,$count_added_memeber,"you added $count_added_memeber members. you need to add 3 members");
+
 
 //-------------------------------------------------------------------UPDATE HANDLERS----------------------------------------------------------------
 

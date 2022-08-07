@@ -20,8 +20,9 @@ class DBHandler{
                 'charset' => config()['DB_CHARSET'],
                 'collation' => config()['DB_COLLATION'],
             ]);
-    
+            $capsule->setAsGlobal(); 
             $capsule->bootEloquent();
+
         }
 
     }
