@@ -13,9 +13,9 @@ all updates by type channel_post type come to this class and you can work on cha
 
 ### see channel_post update type on [telegram doc](https://core.telegram.org/bots/api#message)
 <br>
-<b>when channel_post update will be received, the run() function be called and your all code, will execute in run() function
+<b>when channel_post update will be received, the run() method be called and your all code, will execute in run() method
 <br>
-write your codes in run() function</b>
+write your codes in run() method</b>
 
 <br>
 <br>

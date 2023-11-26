@@ -13,9 +13,9 @@ all updates by type message come to this class and you can work on every message
 
 ### see message types on [telegram doc](https://core.telegram.org/bots/api#message)
 <br>
-<b>when new messages will receive, the run() function be called and your all code, will execute in run() function
+<b>when new messages will receive, the run() method be called and your all code, will execute in run() method
 <br>
-write your codes in run() function</b>
+write your codes in run() method</b>
 
 <br>
 <br>
