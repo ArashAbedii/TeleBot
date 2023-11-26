@@ -2,7 +2,7 @@
 # TeleBot
 ### Telegram Bot Framework for creating any bots 
 
-Created By [Arash Abedi](https://arashabedi.com)
+Created By [Arash Abedi](https://arashabedii.github.io)
 
 <br/>
 <br/>
