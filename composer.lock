@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cdc9de7ce3faeb4e79fb19dddb3e519f",
+    "content-hash": "0a7680d84b69d1b974d370eec2aeb8d7",
     "packages": [
         {
-            "name": "arashabedii/server",
-            "version": "v1.2",
+            "name": "arashabedii/requester",
+            "version": "v1.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ArashAbedii/server.git",
-                "reference": "0d8b008d8f2857c553fdff927777513b5a3c3aca"
+                "url": "https://github.com/ArashAbedii/requester.git",
+                "reference": "89aeec2f50843d5e9f5a505310944c8cdfc27350"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ArashAbedii/server/zipball/0d8b008d8f2857c553fdff927777513b5a3c3aca",
-                "reference": "0d8b008d8f2857c553fdff927777513b5a3c3aca",
+                "url": "https://api.github.com/repos/ArashAbedii/requester/zipball/89aeec2f50843d5e9f5a505310944c8cdfc27350",
+                "reference": "89aeec2f50843d5e9f5a505310944c8cdfc27350",
                 "shasum": ""
             },
             "require": {
@@ -39,10 +39,10 @@
                 "server"
             ],
             "support": {
-                "issues": "https://github.com/ArashAbedii/server/issues",
-                "source": "https://github.com/ArashAbedii/server/tree/v1.2"
+                "issues": "https://github.com/ArashAbedii/requester/issues",
+                "source": "https://github.com/ArashAbedii/requester/tree/v1.4"
             },
-            "time": "2022-07-21T11:18:14+00:00"
+            "time": "2023-05-24T10:33:18+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -1759,5 +1759,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

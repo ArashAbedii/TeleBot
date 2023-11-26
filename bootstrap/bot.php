@@ -22,63 +22,55 @@ DBHandler::setup(true);
 
 //-------------------------------------------------------------------UPDATE HANDLERS----------------------------------------------------------------
 
-//handling message update
-if(update()->getType()=='message'){
+switch(update()->getType()){
 
-    messageHandler()->run();
+    case 'message':
+        messageHandler()->run();
+    break;
 
-}
-//handling callback_query update
-elseif(update()->getType()=='callback_query'){
 
-    callbackQueryHandler()->run();
+    case 'callback_query':
+        callbackQueryHandler()->run();
+    break;
 
-}
-//handling channel_post update
-elseif(update()->getType()=='channel_post'){
 
-    channelPostHandler()->run();
+    case 'channel_post':
+        channelPostHandler()->run();
+    break;
 
-}
-//edited_message update
-elseif(update()->getType()=='edited_message'){
 
-    editedMessageHandler()->run();
+    case 'edited_message':
+        editedMessageHandler()->run();
+    break;
 
-}
-//handling edited_channel_post update
-elseif(update()->getType()=='edited_channel_post'){
 
-    editedChannelPostHandler()->run();
-    
-}
-//handling inline_query update
-elseif(update()->getType()=='inline_query'){
+    case 'edited_channel_post':
+        editedChannelPostHandler()->run();
+    break;
 
-    inlineQueryHandler()->run();
-    
-}
-//handling poll update
-elseif(update()->getType()=='poll'){
 
-    pollHandler()->run();
-    
-}
-//handling poll_answer update
-elseif(update()->getType()=='poll_answer'){
+    case 'inline_query':
+        inlineQueryHandler()->run();
+    break;
 
-    pollAnswerHandler()->run();
-    
-}
-//handling my_chat_member update
-elseif(update()->getType()=='my_chat_member'){
 
-    myChatMemberHandler()->run();
-    
-}
-//handling chat_member update
-elseif(update()->getType()=='chat_member'){
+    case 'poll':
+        pollHandler()->run();
+    break;
 
-    chatMemberHandler()->run();
+
+    case 'poll_answer':
+        pollAnswerHandler()->run();
+    break;
+
+
+    case 'my_chat_member':
+        myChatMemberHandler()->run();
+    break;
+
+
+    case 'chat_member':
+        chatMemberHandler()->run();
+    break;
 
 }

@@ -2,7 +2,7 @@
 
 namespace Src;
 
-use ArashAbedii\Server;
+use ArashAbedii\Request;
 
 //CORE BOT CLASS
 
@@ -279,7 +279,7 @@ class Bot {
             return null;
         }
         
-        return Server::sendRequestWithoutResponse($url,'post',$params);
+        return Request::sendRequestWithoutResponse($url,'post',$params);
     }
 
     //get telegram update types
@@ -292,7 +292,7 @@ class Bot {
         $token=config()['token'];
         $url=config()['request_handler_path'];
         $reqUrl="https://api.telegram.org/bot$token/setWebhook?url=$url";
-        return Server::sendRequest($reqUrl);
+        return Request::send($reqUrl)->body;
     }
 
     //delete webhook helper
@@ -300,14 +300,14 @@ class Bot {
         $token=config()['token'];
         $url=config()['request_handler_path'];
         $reqUrl="https://api.telegram.org/bot$token/deleteWebhook?url=$url";
-       return Server::sendRequest($reqUrl);
+       return Request::send($reqUrl)->body;
     }
 
     //create telegram request
     public static function sendRequest($method,array $params=[]){
         $token=config()['token'];
         $reqUrl="https://api.telegram.org/bot$token/$method";
-        return Server::sendRequest($reqUrl,$params,'post');
+        return Request::send($reqUrl,$params,'post')->body;
     }
 
 }

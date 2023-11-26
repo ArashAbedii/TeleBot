@@ -2,7 +2,7 @@
 
 namespace Src;
 
-use ArashAbedii\Server;
+use ArashAbedii\Request;
 
 class UpdateHandler{
 
@@ -15,7 +15,7 @@ class UpdateHandler{
 
             $latest_update_id_log='storage/latest_update_id.log';
     
-            $update=Server::sendRequest($url,$params,'post');
+            $update=Request::send($url,$params,'post')->body;
     
             if(!empty($update)){
     

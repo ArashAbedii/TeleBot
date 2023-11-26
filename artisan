@@ -10,6 +10,7 @@ use Src\CommandFactory\ModelMaker;
 
 $event=$argv[1];
 $moduleName=isset($argv[2]) ? $argv[2] : false;
+$option=isset($argv[3]) ? $argv[3] : false;
 
 if($event=='make:module'){
     if(empty($moduleName)){
@@ -37,6 +38,12 @@ class '.$moduleName.' {
 }elseif($event=='install:lock_add_member'){
     print(LockAddMember::install());
 }elseif($event=='run:bot' && $moduleName=='--long-polling'){
+
     print("Bot is running ...");
     print(LongPolling::run());
+
+}elseif($event=='serve'){
+
+    $host=str_replace(['http://','https'],['',''],config()['host']);
+    shell_exec("php -S $host");
 }
